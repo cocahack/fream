@@ -65,7 +65,7 @@ pipeline {
         stage ('Deploy') {
             steps {
                 sshagent(credentials : ['fream-app-server-01-key']) {
-                    sh 'ssh -o StrictHostKeyChecking=no "$FREAM_APP_SERVER_USER@$FREAM_APP_SERVER_HOST" "./$SCRIPT_DIR/020-deploy-fream.sh $FREAM_VERSION"'
+                    sh 'ssh -o StrictHostKeyChecking=no "$FREAM_APP_SERVER_USER@$FREAM_APP_SERVER_HOST" ".$SCRIPT_DIR/020-deploy-fream.sh $FREAM_VERSION"'
                 }
             }
         }
