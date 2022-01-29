@@ -6,7 +6,6 @@ pipeline {
         IMAGE_REGISTRY_PORT = credentials('image-registry-port')
         FREAM_APP_SERVER_HOST = credentials('fream-app-server-host')
         FREAM_APP_SERVER_USER = credentials('fream-app-server-user')
-        IMAGE_NAME = 'fream'
     }
 
     stages {
